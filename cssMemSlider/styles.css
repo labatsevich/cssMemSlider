@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
-}
-
 .slider {
     display: flex;
     position: relative;
@@ -15,4 +11,61 @@ ul {
     background-color: #444;
     max-width: 60vw;
     margin: 0 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+}
+
+.slider-container {
+    display: flex;
+    flex: 2 1 auto;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.slides-captions {
+    display: flex;
+    max-width: 20%;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: transparent;
+    border: .2rem solid cornflowerblue;
+    border-radius: 100%;
+}
+
+.slide {
+    position: relative;
+    display: inline-flex;
+    flex: 1 1 auto;
+    margin: 0 auto;
+    background-color: aliceblue;
+    min-width: 100%;
+}
+
+#slide1:checked~.slider-footer .slider-controls .label1,
+#slide2:checked~.slider-footer .slider-controls .label2,
+#slide3:checked~.slider-footer .slider-controls .label3,
+#slide4:checked~.slider-footer .slider-controls .label4 {
+    background-color: cornflowerblue;
 }
