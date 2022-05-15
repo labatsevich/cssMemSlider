@@ -79,22 +79,32 @@ input[type="radio"] {
 
 label {
     display: flex;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: cornflowerblue;
-    border: .2rem solid cornflowerblue;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
     border-radius: 100%;
     transition: all .05s ease-in;
 }
 
-label:hover,
-label:active {
-    border-color: #fff;
-    background-color: #fff;
+label>span {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #009dfc;
+    align-self: center;
+    border-radius: 50%;
+}
+
+label:hover span {
+    background-color: #9bd9ff;
+}
+
+label:active span {
+    background-color: #c8e8fc;
+    transform: scale(1.3);
 }
 
 label:active {
-    transform: scale(1.3);
+    border: .2rem solid #c8e8fc;
 }
 
 .slide {
@@ -117,11 +127,11 @@ img {
     margin: 0;
 }
 
-#slide1:checked~.slider-footer .slider-controls .label1,
-#slide2:checked~.slider-footer .slider-controls .label2,
-#slide3:checked~.slider-footer .slider-controls .label3,
-#slide4:checked~.slider-footer .slider-controls .label4 {
-    background-color: transparent;
+#slide1:checked~.slider-footer .slider-controls .label1 span,
+#slide2:checked~.slider-footer .slider-controls .label2 span,
+#slide3:checked~.slider-footer .slider-controls .label3 span,
+#slide4:checked~.slider-footer .slider-controls .label4 span {
+    background-color: #c8e8fc;
 }
 
 #slide2:checked~.slider-container .slide_1 {
