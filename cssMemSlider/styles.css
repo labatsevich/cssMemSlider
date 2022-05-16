@@ -31,7 +31,7 @@ input[type="radio"] {
 }
 
 .slider {
-    max-width: 60vw;
+    max-width: 45vw;
     margin: 5rem auto 0;
     flex-direction: column;
     padding: 1rem;
